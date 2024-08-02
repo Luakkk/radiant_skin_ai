@@ -1,21 +1,23 @@
 import Link from 'next/link';
-import RadiationIcon from './RadiationIcon';
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <header className="bg-primary text-primary-foreground py-4 px-6 flex items-center justify-between">
-      <div className="flex items-center gap-2">
-        <RadiationIcon className="h-8 w-8" />
-        <div>
-          <h1 className="text-2xl font-bold">RadiantSkinAI</h1>
-          <p className="text-sm">Smart Solutions for Radiant Skin</p>
-        </div>
+    <nav className="w-full flex justify-between p-4 bg-white shadow-md hover:bg-gray-100 transition duration-300">
+      <div className="flex items-center">
+        <img src="/logo2.png" alt="RadiantSkinAI Logo" className="h-10" />
+        <Link href="/" legacyBehavior>
+          <a className="text-xl font-bold ml-2">RadiantSkin.AI</a>
+        </Link>
       </div>
-      <nav className="flex items-center gap-4">
-        <Link href="/" className="text-sm font-medium hover:underline">Home</Link>
-        <Link href="/about" className="text-sm font-medium hover:underline">About</Link>
-        <Link href="/contacts" className="text-sm font-medium hover:underline">Contacts</Link>
-      </nav>
-    </header>
+      <div className="flex space-x-4">
+        <Link href="/" legacyBehavior>
+          <a className="hover:underline">Home</a>
+        </Link>
+        <a href="#how-it-works" className="hover:underline">About</a>
+        <a href="#footer" className="hover:underline">Contacts</a>
+      </div>
+    </nav>
   );
-}
+};
+
+export default Navbar;

@@ -2,4 +2,73 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Add any additional global styles here */
+:root, .light, .light-theme {
+  --teal-1: #f8fefd;
+  --teal-2: #f1fcfb;
+  --teal-3: #d8faf6;
+  --teal-4: #c0f5f0;
+  --teal-5: #a7eee7;
+  --teal-6: #8ce2da;
+  --teal-7: #67d2c9;
+  --teal-8: #02beb4;
+  --teal-9: #63eadf;
+  --teal-10: #57dfd5;
+  --teal-11: #007972;
+  --teal-12: #024440;
+  --gray-1: #f3fffe;
+  --gray-2: #e9fffc;
+  --gray-3: #def6f3;
+  --gray-4: #d4efec;
+  --gray-5: #cbe8e4;
+  --gray-6: #bfe2dd;
+  --gray-7: #b3d7d2;
+  --gray-8: #99c6c0;
+  --gray-9: #4c9c94;
+  --gray-10: #42918a;
+  --gray-11: #27716a;
+  --gray-12: #002824;
+  --color-background: #fff;
+  --teal-contrast: #042825;
+  --teal-surface: #eefbfacc;
+  --teal-indicator: #63eadf;
+  --teal-track: #63eadf;
+  --gray-contrast: #FFFFFF;
+  --gray-surface: #ffffffcc;
+  --gray-indicator: #4c9c94;
+  --gray-track: #4c9c94;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--gray-12);
+  font-family: Arial, sans-serif;
+}
+
+.main-container, .home-container {
+  padding: 2rem;
+  background-color: var(--teal-1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: var(--teal-11);
+}
+
+p {
+  color: var(--gray-10);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: var(--teal-contrast);
+  background-color: var(--teal-8);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: var(--teal-7);
+}

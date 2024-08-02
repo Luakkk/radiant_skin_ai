@@ -1,9 +1,11 @@
 import React from 'react';
 
-export function Button({ children, className, ...props }) {
-    return (
-        <button className={`btn ${className}`} {...props}>
-            {children}
-        </button>
-    );
-}
+const Button = ({ children, ...props }) => {
+  return (
+    <button {...props} className="bg-teal-500 text-white px-6 py-3 rounded-md shadow-md hover:bg-teal-600 transition duration-300">
+      {children}
+    </button>
+  );
+};
+
+export default Button;
